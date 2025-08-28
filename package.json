@@ -13,7 +13,7 @@
   "scripts": {
     "lint": "eslint .",
     "test": "echo \"No tests yet\"",
-    "build": "esbuild index.js --bundle --minify --global-name=Dataleon --outfile=sdk/js/dataleon.min.js"
+    "build": "esbuild index.js --bundle --minify --global-name=Dataleon --outfile=build/sdk/js/dataleon.min.js"
   },
   "devDependencies": {
     "esbuild": "^0.25.9"
