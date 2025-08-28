@@ -26,7 +26,7 @@ npm install --save @dataleon/web-sdk
 ### Or via a `<script>` tag
 
 ```html
-<script src="https://cdn.dataleon.ai/sdk/js/latest/dataleon.min.js"></script>
+<script src="https://customer-assets.eu-west-1.dataleon.ai/sdk/js/latest/dataleon.min.js"></script>
 ```
 
 ## Usage

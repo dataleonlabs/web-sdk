@@ -38,7 +38,8 @@ jobs:
     - name: Publish dataleon.min.js to Scaleway
       run: |
         scw object config get type=s3cmd > /home/runner/.s3cfg
-        s3cmd --no-mime-magic --guess-mime-type --acl-public put ./build/sdk/js/dataleon.min.js s3://$SCW_BUCKET_NAME/sdk/js/dataleon.min.js
+        s3cmd --no-mime-magic --guess-mime-type --acl-public put ./build/sdk/js/dataleon.min.js s3://$SCW_BUCKET_NAME/sdk/js/$SHA/dataleon.min.js
+        s3cmd --no-mime-magic --guess-mime-type --acl-public put ./build/sdk/js/dataleon.min.js s3://$SCW_BUCKET_NAME/sdk/js/latest/dataleon.min.js
       env:
         SCW_ACCESS_KEY: ${{ secrets.SCW_ACCESS_KEY }}
         SCW_SECRET_KEY: ${{ secrets.SCW_SECRET_KEY }}
@@ -46,3 +47,4 @@ jobs:
         SCW_DEFAULT_ORGANIZATION_ID: ${{ secrets.SCW_DEFAULT_ORGANIZATION_ID }}
         SCW_DEFAULT_REGION: fr-par
         SCW_BUCKET_NAME: yap-assets-customer
+        SHA: ${{ github.sha }}
