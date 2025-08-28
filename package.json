@@ -1,0 +1,21 @@
+{
+  "name": "dataleon-web-sdk",
+  "version": "1.0.0",
+  "description": "SDK Web pour l'intégration Dataleon",
+  "main": "index.js",
+  "keywords": [
+    "web",
+    "dataleon",
+    "sdk"
+  ],
+  "author": "dataleon",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "echo \"No tests yet\"",
+    "build": "esbuild index.js --bundle --minify --global-name=Dataleon --outfile=sdk/js/dataleon.min.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.9"
+  }
+}
