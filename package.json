@@ -1,6 +1,6 @@
 {
   "name": "@dataleon/web-sdk",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "SDK Web pour l'intégration Dataleon",
   "main": "index.js",
   "keywords": [
