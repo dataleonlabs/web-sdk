@@ -56,7 +56,7 @@ jobs:
         npm version patch --no-git-tag-version
         git add package.json package-lock.json
         git commit -m "chore: bump version skip ci"
-        git push
+        git push -u origin main
         git push --tags
 
     - name: Publish to npm
