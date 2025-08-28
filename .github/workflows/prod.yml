@@ -62,6 +62,8 @@ jobs:
         git push --tags
 
     - name: Publish to npm
-      run: npm publish --access public
+      run: |
+        export NODE_AUTH_TOKEN=$NPM_TOKEN
+        npm publish --access public
       env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
