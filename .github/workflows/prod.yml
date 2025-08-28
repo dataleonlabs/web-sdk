@@ -16,7 +16,9 @@ jobs:
         node-version: [19.x]
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
@@ -56,7 +58,7 @@ jobs:
         npm version patch --no-git-tag-version
         git add package.json package-lock.json
         git commit -m "chore: bump version skip ci"
-        git push -u origin main
+        git push
         git push --tags
 
     - name: Publish to npm
