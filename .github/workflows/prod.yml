@@ -59,8 +59,8 @@ jobs:
         npm version patch --no-git-tag-version
         git add package.json package-lock.json
         git commit -m "chore: bump version skip ci"
-        git push origin main
-        git push origin main --tags
+        git push origin main --force
+        git push origin main --force --tags
 
     - name: Authenticate with npm
       run: |
